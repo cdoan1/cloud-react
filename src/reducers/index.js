@@ -11,9 +11,9 @@
 
 // export default rootReducer;
 
-
 import { ADD_ARTICLE, REMOVE_ARTICLE } from '../constants/action-types';
 
+//
 // pattern for a reducer
 //
 const initialState = {

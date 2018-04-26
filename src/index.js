@@ -31,13 +31,13 @@ import registerServiceWorker from './registerServiceWorker';
 // const store = createStore(counterReducer);
 
 // this is a react component
-const Counter = ({ value, onIncrement, onDecrement }) => (
-    <div>
-        <h1>{value}</h1>
-        <button onClick={onIncrement}>+</button>
-        <button onClick={onDecrement}>-</button>
-    </div>
-)
+// const Counter = ({ value, onIncrement, onDecrement }) => (
+//     <div>
+//         <h1>{value}</h1>
+//         <button onClick={onIncrement}>+</button>
+//         <button onClick={onDecrement}>-</button>
+//     </div>
+// )
 
 // this is the rendor method
 const render = () => {

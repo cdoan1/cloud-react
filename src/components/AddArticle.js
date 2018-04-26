@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addArticle } from '../actions/index';
 
-
 // this is a simple component
 // that defines its own state
 // this is a STATEFUL COMPONENT
+//
 // class ConnectedAddArticle extends Component {
 //     render() {
 //         return 
