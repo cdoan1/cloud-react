@@ -4,6 +4,7 @@ import './App.css';
 import List from "./components/List";
 import Form from './components/Form';
 import Tiles from './components/Tiles';
+import ExampleButton from './components/ExampleButton';
 
 const App = () => (
   <div className="App">
@@ -24,6 +25,9 @@ const App = () => (
       </div>
       <div>
         <Tiles />
+      </div>
+      <div>
+        <ExampleButton />
       </div>
     </div>
   </div>
