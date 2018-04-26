@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Paper from 'material-ui/Paper';
+import { removeArticle } from "../actions/index";
 
-const mapStateToProps = state => {
-  return { articles: state.articles };
-};
 
 const style = {
     height: 150,
@@ -14,13 +12,23 @@ const style = {
     display: 'inline-block',
 };
 
-const ConnectedTiles = ({ articles }) => (
+const mapStateToProps = state => {
+    return { articles: state.articles };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        removeArticle: article => dispatch(removeArticle(article))
+    };
+};
+
+const ConnectedTiles = ({ articles, removeArticle }) => (
     <div>
         {articles.map(el => (
             <Paper style={style} zDepth={4} rounded={false} onClick={() => { console.log('paper', el.title) }} key={el.id}>
                 <div>
                     <h3>{el.title}</h3>
-                    <button label='Default' onClick={() => { console.log('button', el.title) }} className='mui-btn'>
+                    <button label='Default' onClick={ () => {console.log('removing:', el); removeArticle(el); } } className='mui-btn'>
                         remove
                     </button>
                 </div>
@@ -29,6 +37,7 @@ const ConnectedTiles = ({ articles }) => (
     </div>
 );
 
-const Tiles = connect(mapStateToProps)(ConnectedTiles);
+  
+const Tiles = connect(mapStateToProps, mapDispatchToProps)(ConnectedTiles);
 
 export default Tiles;
