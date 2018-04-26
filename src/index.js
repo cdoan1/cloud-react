@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 // import { createStore } from 'redux';
 import store from './store/index';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import './index.css';
 
@@ -42,7 +43,9 @@ const Counter = ({ value, onIncrement, onDecrement }) => (
 const render = () => {
     ReactDOM.render(
         <Provider store={store}>
-            <App />
+            <MuiThemeProvider>
+                <App />
+            </MuiThemeProvider>
         </Provider>,
         document.getElementById('root')
     );

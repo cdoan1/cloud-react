@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import List from "./components/List";
 import Form from './components/Form';
+import Tiles from './components/Tiles';
 
 const App = () => (
   <div className="App">
@@ -20,6 +21,9 @@ const App = () => (
           <h2>Add a new article</h2>          
           <Form />
         </div>
+      </div>
+      <div>
+        <Tiles />
       </div>
     </p>
   </div>
