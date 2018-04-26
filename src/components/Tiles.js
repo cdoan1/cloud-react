@@ -17,13 +17,12 @@ const style = {
 const ConnectedTiles = ({ articles }) => (
     <div>
         {articles.map(el => (
-            <Paper style={style} zDepth={3} rounded={false} onClick={() => { console.log(el.title) }}>
+            <Paper style={style} zDepth={4} rounded={false} onClick={() => { console.log(el.title) }} key={el.id}>
                 <div>
                     <h3>{el.title}</h3>
                     <button label="Default" onClick={() => { console.log(el.title) }} className='mui-btn'>
                         remove
                     </button>
-
                 </div>
             </Paper>
         ))}
