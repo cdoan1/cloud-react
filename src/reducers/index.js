@@ -1,16 +1,3 @@
-// const rootReducer = (state = 0, action) => {
-//     switch (action.type) {
-//         case 'INCREMENT':
-//             return state + 1;
-//         case 'DECREMENT':
-//             return state - 1;
-//         default:
-//             return state;
-//     }
-// }
-
-// export default rootReducer;
-
 import { ADD_ARTICLE, REMOVE_ARTICLE } from '../constants/action-types';
 
 //
@@ -34,8 +21,11 @@ const rootReducer = (state = initialState, action) => {
             return { ...state, articles: [...state.articles, action.payload] };
         case REMOVE_ARTICLE:
             console.log('remove article', action.payload);
-            var index = state.articles.findIndex( article => article.id === action.payload.id);
-            return { articles: [...state.articles.slice(0, index), ...state.articles.slice(index+1)] }
+            // 1)
+            // slice is not immutable, does not return a new object
+            // var index = state.articles.findIndex( article => article.id === action.payload.id);
+            // return { articles: [...state.articles.slice(0, index), ...state.articles.slice(index+1)] }
+            return { articles: [...state.articles.filter(el => el.id !== action.payload.id)]}
         default:
             return state;
     }
