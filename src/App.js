@@ -33,7 +33,9 @@ const App = () => (
     </div>
     <footer id="footer">
       <div className="mui-container-fluid">
+        <span><br/>
         Made with ♥ by <a href="https://www.muicss.com">MUI</a>
+        </span>
       </div>
     </footer>
   </div>
