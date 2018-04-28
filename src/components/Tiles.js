@@ -38,7 +38,6 @@ const ConnectedTiles = ({ articles, removeArticle }) => (
 // const mapStateToProps = state => {
 //     return { articles: state.articles };
 // };
-
 const mapStateToProps = state => {
     return state.articles;
 };

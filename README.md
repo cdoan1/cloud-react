@@ -11,9 +11,11 @@ brute forcing things is just not going to fly anymore. It's just not professiona
 
 | change or feature |
 |-------------------|
-| [x] root reducer |
+| [x] pass function to child component via `props` |
+| [x] define a `rootreducer` |
+| [x] enable `combineReducer` |
 | [ ] multiple reducers: articles and todos |
-| [ ] asynchronous reducer |
+| [ ] `asynchronous` reducer |
 
 
 # Reducer
