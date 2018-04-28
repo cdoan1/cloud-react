@@ -10,7 +10,6 @@ import fetch from 'isomorphic-fetch';
 
 const baseURL = 'https://randomuser.me/api/';
 
-
 const initialState = {
     users: []
 };
@@ -23,6 +22,7 @@ const users = (state = initialState, action) => {
         case 'GET_USERS':
             // console.log('get user action');
             const data = fetch(`${baseURL}`).then(resp => resp.json()).then(json => json.results);
+            // console.log('action.payload:', action.payload);
             return { ...state, users: [...state.users, data ] };
         case 'LIST_USERS':
             return state;

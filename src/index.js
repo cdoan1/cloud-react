@@ -64,6 +64,6 @@ render();
 // 1) on startup , automatically load some user data!!!
 // trigger the action GET_USERS
 store.dispatch({ type: 'GET_USERS' });
-// store.dispatch(getUsers);
+// store.dispatch(dixpatch => { dispatch(getUsers) });
 // default create-react-app boilerplate
 registerServiceWorker();
