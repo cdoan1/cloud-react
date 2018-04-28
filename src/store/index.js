@@ -1,5 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
-import rootReducer from '../reducers/index';
+// import articles from '../reducers/index';
+import rootReducer from '../reducers/rootReducer';
 // Logger with default options 
 import logger from 'redux-logger'
 

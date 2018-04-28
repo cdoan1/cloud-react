@@ -7,7 +7,7 @@ const initialState = {
     articles: []
 };
 
-const rootReducer = (state = initialState, action) => {
+const articles = (state = initialState, action) => {
     switch (action.type) {
         case ADD_ARTICLE:
             // merge into the current state object, articles
@@ -31,4 +31,4 @@ const rootReducer = (state = initialState, action) => {
     }
 };
 
-export default rootReducer;
+export default articles;
