@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Paper from 'material-ui/Paper';
-import { removeArticle } from "../actions/index";
+import { removeArticle } from '../actions/index';
+import ExampleButton from './ExampleButton';
+import remove from 'material-ui/svg-icons/content/remove';
 
 const style = {
     height: 150,
@@ -16,15 +18,17 @@ const style = {
 // and can access props as removeArticles(el)
 // because the fat arrow maintains this
 //
+// 2. example of passing function to child component
 const ConnectedTiles = ({ articles, removeArticle }) => (
     <div>
         {articles.map(el => (
             <Paper style={style} zDepth={4} rounded={false} onClick={() => { console.log('paper', el.title) }} key={el.id}>
                 <div>
                     <h3>{el.title}</h3>
-                    <button label='Default' onClick={() => { removeArticle(el) }} className='mui-btn'>
+                    {/* <button label='Default' onClick={() => { removeArticle(el) }} className='mui-btn'>
                         remove
-                    </button>
+                    </button> */}
+                    <ExampleButton handler={() => {removeArticle(el)}} />
                 </div>
             </Paper>
         ))}
@@ -41,6 +45,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
+// connect is a curried function! connect()()
 const Tiles = connect(mapStateToProps, mapDispatchToProps)(ConnectedTiles);
 
 export default Tiles;
