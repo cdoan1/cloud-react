@@ -6,6 +6,8 @@ import { Provider } from "react-redux";
 import store from './store/index';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+import { getUsers } from './actions/index';
+
 import './index.css';
 
 import App from './App';
@@ -59,5 +61,9 @@ const render = () => {
 // call the render function
 render();
 
+// 1) on startup , automatically load some user data!!!
+// trigger the action GET_USERS
+store.dispatch({ type: 'GET_USERS' });
+// store.dispatch(getUsers);
 // default create-react-app boilerplate
 registerServiceWorker();

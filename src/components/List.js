@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 const ConnectedList = ({ articles }) => {
 
-  console.log('articles:', articles);
+  // console.log('articles:', articles);
 
   return (
     <ul className="list-group list-group-flush">
