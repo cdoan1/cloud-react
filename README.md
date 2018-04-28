@@ -31,5 +31,5 @@ return { ...state, articles: [...state.articles, action.payload] };
 
 ```javascript
 
-return { articles: [...state.articles.filter(el => el.id !== action.payload.id)]}
+return { articles: [...state.articles.filter(el => el.id !== action.payload.id)] }
 ```

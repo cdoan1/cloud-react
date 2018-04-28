@@ -7,11 +7,16 @@ import Tiles from './components/Tiles';
 
 const App = () => (
   <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React</h1>
+    <header id="header">
+      <div className="mui-appbar mui--appbar-line-height">
+        <div className="mui-container-fluid">
+          <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+          <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+          <span className="mui--text-title mui--visible-xs-inline-block">Brand.io</span>
+        </div>
+      </div>
     </header>
-    <div className="App-intro">
+    <div id="content-wrapper">
       <div className="row mt-5 mui-mt-5">
         <div className="col-md-4 offset-md-1 mui-col-md-4">
           <h1>Articles</h1>
@@ -26,6 +31,11 @@ const App = () => (
         <Tiles />
       </div>
     </div>
+    <footer id="footer">
+      <div className="mui-container-fluid">
+        Made with ♥ by <a href="https://www.muicss.com">MUI</a>
+      </div>
+    </footer>
   </div>
 );
 
