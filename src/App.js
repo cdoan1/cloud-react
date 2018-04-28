@@ -4,7 +4,6 @@ import './App.css';
 import List from "./components/List";
 import Form from './components/Form';
 import Tiles from './components/Tiles';
-import ExampleButton from './components/ExampleButton';
 
 const App = () => (
   <div className="App">
@@ -19,15 +18,12 @@ const App = () => (
           <List />
         </div>
         <div className="col-md-4 offset-md-1 mui-col-md-4">
-          <h2>Add a new article</h2>          
+          <h2>Add a new article</h2>
           <Form />
         </div>
       </div>
       <div>
         <Tiles />
-      </div>
-      <div>
-        <ExampleButton />
       </div>
     </div>
   </div>
