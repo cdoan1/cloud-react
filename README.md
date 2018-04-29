@@ -4,8 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # description
 
-I'm using this project to learn redux in earnest from start. We've been working on front end, and
-brute forcing things is just not going to fly anymore. It's just not professional, given where we are.
+```
+git clone
+npm install
+npm start
+```
 
 # ChangeLog
 
@@ -16,6 +19,8 @@ brute forcing things is just not going to fly anymore. It's just not professiona
 | [x] enable `combineReducer` |
 | [x] multiple reducers: articles and todos |
 | [x] `asynchronous` reducer, using redux middleware: `thunk` and `promise` |
+| [x] fetch external data source into redux |
+| [ ] trigger async action from component, and remove from index.js |
 
 
 # Reducer

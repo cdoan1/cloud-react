@@ -47,8 +47,8 @@ const App = () => (
           </div>          
         </div>
       </div>
-    </div>
 
+    </div>
     <footer id="footer">
       <div className="mui-container-fluid">
         <span><br/>

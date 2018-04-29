@@ -19,7 +19,8 @@ const users = (state = initialState, action) => {
         case 'FETCH_USERS_SUCCESS':
         case 'FETCH_USERS':
             return state;
-        case 'FETCH_USERS_RECIEVED':        
+        case 'FETCH_USERS_RECIEVED':
+            // action.payload.results is already an array
             return { ...state, users: action.payload.results };
         default:
             return state;

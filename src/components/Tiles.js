@@ -24,10 +24,7 @@ const ConnectedTiles = ({ articles, removeArticle }) => (
         {articles.map(el => (
             <Paper style={style} zDepth={4} rounded={false} onClick={() => { console.log('paper', el.title) }} key={el.id}>
                 <div>
-                    <h3>{el.title}</h3>
-                    {/* <button label='Default' onClick={() => { removeArticle(el) }} className='mui-btn'>
-                        remove
-                    </button> */}
+                    <h3>{el.title.substring(0,12)}</h3>
                     <ExampleButton handler={() => {removeArticle(el)}} />
                 </div>
             </Paper>
