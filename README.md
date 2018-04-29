@@ -14,8 +14,8 @@ brute forcing things is just not going to fly anymore. It's just not professiona
 | [x] pass function to child component via `props` |
 | [x] define a `rootreducer` |
 | [x] enable `combineReducer` |
-| [ ] multiple reducers: articles and todos |
-| [ ] `asynchronous` reducer |
+| [x] multiple reducers: articles and todos |
+| [x] `asynchronous` reducer, using redux middleware: `thunk` and `promise` |
 
 
 # Reducer

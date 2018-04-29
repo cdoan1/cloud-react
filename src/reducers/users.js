@@ -1,11 +1,3 @@
-// $.ajax({
-//   url: 'https://randomuser.me/api/',
-//   dataType: 'json',
-//   success: function(data) {
-//     console.log(data);
-//   }
-// });
-
 import fetch from 'isomorphic-fetch';
 
 const baseURL = 'https://randomuser.me/api/';
@@ -15,9 +7,7 @@ const initialState = {
 };
 
 // just a switch that returns all the actions
-
 const users = (state = initialState, action) => {
-
     switch(action.type) {
         case 'GET_USERS':
             // console.log('get user action');
@@ -26,6 +16,11 @@ const users = (state = initialState, action) => {
             return { ...state, users: [...state.users, data ] };
         case 'LIST_USERS':
             return state;
+        case 'FETCH_USERS_SUCCESS':
+        case 'FETCH_USERS':
+            return state;
+        case 'FETCH_USERS_RECIEVED':        
+            return { ...state, users: action.payload.results };
         default:
             return state;
     }

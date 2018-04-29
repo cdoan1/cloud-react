@@ -4,6 +4,8 @@ import './App.css';
 import List from "./components/List";
 import Form from './components/Form';
 import Tiles from './components/Tiles';
+import Users from './components/Users';
+
 
 const App = () => (
   <div className="App">
@@ -29,6 +31,9 @@ const App = () => (
       </div>
       <div>
         <Tiles />
+      </div>
+      <div>
+        <Users />
       </div>
     </div>
     <footer id="footer">

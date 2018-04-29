@@ -5,17 +5,13 @@ import { Provider } from "react-redux";
 // import { createStore } from 'redux';
 import store from './store/index';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-import { getUsers } from './actions/index';
-
+import { getUsers, fetchUsers } from './actions/index';
+import fetch from 'isomorphic-fetch';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-import App from './App';
-// import ExampleComponent from './components/ExampleComponent';
-// import Form from './components/Form';
-
-// import AddArticle from './components/AddArticle';
-import registerServiceWorker from './registerServiceWorker';
+const baseURL = 'https://randomuser.me/api';
 
 // counter reeducer, defines how the state will change.
 // const counterReducer = (state = 0, action) => {
@@ -63,7 +59,18 @@ render();
 
 // 1) on startup , automatically load some user data!!!
 // trigger the action GET_USERS
-store.dispatch({ type: 'GET_USERS' });
+// store.dispatch({ type: 'GET_USERS' });
+store.dispatch( dispatch => {
+    dispatch({type: 'FETCH_USERS'});
+    fetch(`${baseURL}/?results=10`)
+    .then( resp => { return resp.json(); })
+    .then( json => {
+        console.log('json:', json.results);
+        dispatch({type: 'FETCH_USERS_RECIEVED', payload: json})
+    });
+    dispatch({type: 'FETCH_USERS_SUCCESS'});
+});
+
 // store.dispatch(dixpatch => { dispatch(getUsers) });
 // default create-react-app boilerplate
 registerServiceWorker();
