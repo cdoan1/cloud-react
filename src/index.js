@@ -9,6 +9,9 @@ import { getUsers, fetchUsers } from './actions/index';
 import fetch from 'isomorphic-fetch';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+
+import { USER_RESULT_SIZE } from './constants/action-types';
+
 import './index.css';
 
 const baseURL = 'https://randomuser.me/api';
@@ -62,7 +65,7 @@ render();
 // store.dispatch({ type: 'GET_USERS' });
 store.dispatch( dispatch => {
     dispatch({type: 'FETCH_USERS'});
-    fetch(`${baseURL}/?results=10`)
+    fetch(`${baseURL}/?results=${USER_RESULT_SIZE}`)
     .then( resp => { return resp.json(); })
     .then( json => {
         console.log('json:', json.results);

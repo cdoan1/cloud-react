@@ -4,4 +4,7 @@ export const GET_USERS = 'GET_USERS';
 export const LIST_USERS = 'LIST_USERS';
 export const FETCH_USERS = 'FETCH_USERS';
 export const FETCH_USERS_SUCCESS = 'FETCH_USERS';
-export const FETCH_USER_STARTING = 'FETCH_USER_STARTING';
+export const FETCH_USERS_STARTING = 'FETCH_USERS_STARTING';
+
+
+export const USER_RESULT_SIZE = 2

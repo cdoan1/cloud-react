@@ -31,6 +31,7 @@ class ConnectedForm extends Component {
   render() {
     const { title } = this.state;
     return (
+      <div>
       <form onSubmit={this.handleSubmit} className="mui-form">
         <div className="form-group">
           {/* <label htmlFor="title">Title</label> */}
@@ -49,6 +50,10 @@ class ConnectedForm extends Component {
           SAVE
         </button>
       </form>
+      <button onClick={(event) => {console.log('button event:', event)}} className="btn btn-success btn-lg mui-btn mui-btn--primary mui-btn--raised">
+          UPDATE USERS
+      </button>
+      </div>
     );
   }
 }

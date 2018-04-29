@@ -1,6 +1,6 @@
 import { ADD_ARTICLE, REMOVE_ARTICLE } from '../constants/action-types';
 import { GET_USERS } from '../constants/action-types';
-import { FETCH_USERS_SUCCESS, FETCH_USER_STARTING } from '../constants/action-types';
+import { FETCH_USERS_SUCCESS, FETCH_USERS_STARTING } from '../constants/action-types';
 
 import fetch from 'isomorphic-fetch';
 const baseURL = 'https://randomuser.me/api/';
@@ -31,7 +31,7 @@ export const getUsers = users => (
 
 export const fetchUsersStarting = isLoading => (
     {
-        type: FETCH_USER_STARTING,
+        type: FETCH_USERS_STARTING,
         payload: isLoading = true
     }
 )
