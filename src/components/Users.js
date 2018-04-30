@@ -5,21 +5,28 @@ import { fetchUsers } from '../actions/index';
 const ConnectedUsers = ({ users }) => (
     <div>
         <h1>Users</h1>
-        {users.map(el => (
-        <table key={el.login.username}>
-            <tbody>
+        <table key='123' className='mui-table'>
+            <tbody>           
+            {users.map(el => (
                 <tr>
-                    <th colSpan='4'><img src={el.picture.large}/></th>
+                    <td>
+                        <table className='mui-table' key='users-234'>
+                            <tbody>
+                                <tr><td><h2>{el.name.first} {el.name.last}</h2></td></tr>
+                                <tr><td>{el.login.username}</td></tr>
+                                <tr><td>{el.phone}</td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <div>
+                            <img src={el.picture.large}/>
+                        </div>
+                    </td>
                 </tr>
-                <tr>
-                    <td>{el.name.first}</td>
-                    <td>{el.name.last}</td>
-                    <td>{el.login.username}</td>
-                    <td>{el.phone}</td>
-                </tr>
+            ))}
             </tbody>
         </table>
-        ))}
     </div>
 );
 
